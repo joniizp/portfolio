@@ -62,18 +62,15 @@ of the page.-->
     </p>
   </div>
 
-<div class="img_right" id="project2">
+<div class="img_right" id="project2" style="position: relative;">
   <img 
     src="imagesp/think.jpg" 
-    style="cursor: pointer; width: 100%;" 
-    onclick="playHostedVideo()" 
+    id="videoPlaceholder"
+    style="cursor: pointer; width: 100%; display: block;" 
+    onclick="showVideo()" 
     alt="Click to play video">
 </div>
 
-<div class="text_left">
-  <h3>project #2: think of yooko</h3>
-  <p>Aenean blandit, turpis ut porttitor ultricies, lacus lectus pretium dui...</p>
-</div>
 
 
   <div class="img_left" id="project3"><img src="imagesp/perfect.png"></div>
@@ -93,15 +90,30 @@ of the page.-->
   </div>
   
 <script>
-function playHostedVideo() {
-  const container = document.getElementById('project2');
-   container.innerHTML = `
+const container = document.getElementById('project2');
+const originalImage = `
+  <img src="imagesp/think.jpg" id="videoPlaceholder" 
+       style="cursor: pointer; width: 100%; display: block;" 
+       onclick="showVideo()">`;
+
+function showVideo() {
+  // Replace YOUR_VIDEO_ID if using YouTube, or use a <video> tag for hosted files
+  container.innerHTML = `
+    <button onclick="closeVideo()" style="
+      position: absolute; top: 10px; right: 10px; z-index: 10;
+      background: rgba(0,0,0,0.6); color: white; border: none; 
+      border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
+      font-size: 18px; font-weight: bold;">&times;</button>
     <video width="100%" height="auto" controls autoplay>
       <source src="imagesp/think_of_yooko.mov" type="video/mp4">
-      Your browser does not support the video tag.
     </video>`;
 }
+
+function closeVideo() {
+  container.innerHTML = originalImage;
+}
 </script>
+
 
 </body>
 
