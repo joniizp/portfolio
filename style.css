@@ -12,7 +12,7 @@ div {
 and images in "divs" and then move them around the page. */
   padding: 15px;
   margin: 15px;
-  background: black;
+  background: #a8a89d;
 }
 
 img {
@@ -21,7 +21,7 @@ img {
 }
 
 p {
-  background: black;
+  background: #a8a89d;
 }
 
 h1, h2, h3 {
@@ -59,7 +59,7 @@ ul, ol {
 }
 
 #bio {
-  background: black;
+  background: #a8a89d;
   margin: 0px;
   padding: 10px;
   text-align: center;
