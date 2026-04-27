@@ -1,7 +1,7 @@
 body {
   /*background-image: url("images/header.png");*/
   background-image: linear-gradient(purple, red, blue);
-  font-family: 'Open Sans', sans-serif;
+  font-family: helvetica ;
   color: white;
   margin: 0;
   background-color: black;
@@ -25,7 +25,7 @@ p {
 }
 
 h1, h2, h3 {
-  font-family: 'Acme', sans-serif;
+  font-family: helvetica;
 }
 
 ul, ol {
