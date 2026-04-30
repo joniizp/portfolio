@@ -34,15 +34,12 @@ ul, ol {
 .topnav {
   background-color: #333;
   overflow: hidden;
-  /* Add these two lines */
   display: flex;
   justify-content: center;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  /* DELETE float: left; from here */
-  color: #f2f2f2;
+  color: #75fac1;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -51,13 +48,13 @@ ul, ol {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #f5eca9;
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #aa04a2;
+  background-color: #ff737a;
   color: white;
 }
 
