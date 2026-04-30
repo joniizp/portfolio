@@ -134,19 +134,23 @@ const originalImage = `
        onclick="showVideo()">`;
 
 function showVideo() {
-  const container = document.getElementById('project2-container');
+  const container = document.getElementById('project2');
   
-  // Replace the image with the video tag
-  container.innerHTML = `
-    <video width="100%" controls autoplay>
-      <source src="imagesp/think_of_yooko.mov" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <p onclick="location.reload()" style="cursor:pointer; text-decoration:underline; font-size: 0.8em; margin-top: 10px;">
-      Reset to Image
-    </p>
-  `;
+  if (container) {
+    container.innerHTML = `
+      <video width="100%" controls autoplay>
+        <source src="imagesp/think_of_yooko.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p onclick="location.reload()" style="cursor:pointer; text-decoration:underline; font-size: 0.9em; margin-top: 10px;">
+        ← Back to Image
+      </p>
+    `;
+  } else {
+    console.error("Could not find the project2 container");
+  }
 }
+
 
 function hideVideo() {
   // Show the image again
