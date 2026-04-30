@@ -134,20 +134,27 @@ const originalImage = `
        onclick="showVideo()">`;
 
 function showVideo() {
-  // Replace YOUR_VIDEO_ID if using YouTube, or use a <video> tag for hosted files
-  container.innerHTML = `
-    <button onclick="closeVideo()" style="
-      position: absolute; top: 10px; right: 10px; z-index: 10;
-      background: rgba(0,0,0,0.6); color: white; border: none; 
-      border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
-      font-size: 18px; font-weight: bold;">&times;</button>
-    <video width="100%" height="auto" controls autoplay>
-      <source src="imagesp/think_of_yooko.mov" type="video/mp4">
-    </video>`;
+  // Hide the image
+  document.getElementById('videoPlaceholder').style.display = 'none';
+  
+  // Show the video container
+  const container = document.getElementById('videoContainer');
+  container.style.display = 'block';
+  
+  // Set your video URL here
+  const videoLink = "YOUR_VIDEO_URL_HERE"; 
+  document.getElementById('projectVideo').src = videoLink;
 }
 
-function closeVideo() {
-  container.innerHTML = originalImage;
+function hideVideo() {
+  // Show the image again
+  document.getElementById('videoPlaceholder').style.display = 'block';
+  
+  // Hide the video container
+  document.getElementById('videoContainer').style.display = 'none';
+  
+  // Clear the video src to stop it from playing in the background
+  document.getElementById('projectVideo').src = "";
 }
 </script>
 
