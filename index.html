@@ -53,43 +53,66 @@ of each project div is labeled "project1" or "project2" (etc.)-->
 <!--the "class" tag works a lot like the "id" tag, except it's helpful to use for a whole class
 of divs - in this case, the "img_left" class will style all the images I want to align to the left
 of the page.-->
- <div class="img_left" id="project1">
-  <a href="https://joniizp.github.io/asleep/">
-    <img src="imagesp/sleep.jpg" alt="Project 1: Asleep">
-  </a>
+<div class="project-wrapper">
+  <!-- Project 1 Image -->
+  <div class="project-media" id="project1">
+    <a href="https://joniizp.github.io/asleep/">
+      <img src="imagesp/sleep.jpg" alt="Project 1: Asleep">
+    </a>
+  </div>
+
+  <!-- Project 1 Text -->
+  <div class="project-text">
+    <h3>Project #1: asleep</h3>
+    <p>This flarf poem was built off of a text i sent my boyfriend in the morning. "I fell back asleep" i texted after letting him know i overslept in the morning. Google search results of this quote led me to a forum post about grammar. The final poem i created questions our reality vs. the dream world.</p>
+  </div>
 </div>
 
-<div class="text_right">
-  <h3>Project #1: asleep</h3>
-  <p>This flarf poem was built off of a text i sent my boyfriend in the morning. "I fell back asleep" i texted after letting him know i overslept in the morning. Google search results of this quote led me to a forum post about grammar. The final poem i created questions our reality vs. the dream world.</p>
+<div class="project-container">
+  <!-- Image Section -->
+  <div class="img-center" id="project2">
+    <img 
+      src="imagesp/think.jpg" 
+      id="videoPlaceholder"
+      style="cursor: pointer; width: 100%; max-width: 600px; display: block;" 
+      onclick="showVideo()" 
+      alt="Click to play video">
+  </div>
+
+  <!-- Text Section -->
+  <div class="text-center">
+    <h3>Project #2: think of yooko</h3>
+    <p>Experimenting with Zoom's green screen feature, i created a music video for NEW YORK's "Think of You". This piece is titled "think of yooko" in honor of my baby (cat). Truly, i think of him all day.</p>
+  </div>
 </div>
 
-<div class="img_right" id="project2" style="position: relative;">
-  <img 
-    src="imagesp/think.jpg" 
-    id="videoPlaceholder"
-    style="cursor: pointer; width: 100%; display: block;" 
-    onclick="showVideo()" 
-    alt="Click to play video"></div>
-    <div class="text_left">
-    <p><h3>Project #2: think of yooko</h3></br>Experimenting with Zoom's green screen feature, i created a music video for NEW YORK's "Think of You". This piece is titled "think of yooko" in honor of my baby (cat). Truly, i think of him all day.
-    </div>
-
-  <div class="img_left" id="project3">
+<div class="project-wrapper">
+  <!-- Project 3 Image -->
+  <div class="project-media" id="project3">
     <a href="https://joniizp.github.io/you-deserve-this/">
-    <img src="imagesp/perfect.png" alt="Project 3: You Deserve This">
-  </a>
+      <img src="imagesp/perfect.png" alt="Project 3: You Deserve This">
+    </a>
   </div> 
   
-  <div class="text_right">
-    <p><h3>Project #3: you deserve this</h3></br>Inspired by own troubles balancing school, work, and a social life, this twine story takes you through an evening of social self care. You will come across oversized fashion pieces, flickr imagery from the 2000s, and maybe even Addison Rae.</p>
+  <!-- Project 3 Text -->
+  <div class="project-text">
+    <h3>Project #3: you deserve this</h3>
+    <p>Inspired by own troubles balancing school, work, and a social life, this twine story takes you through an evening of social self care. You will come across oversized fashion pieces, flickr imagery from the 2000s, and maybe even Addison Rae.</p>
+  </div>
+</div>
+
+<div class="project-wrapper">
+  <!-- Project 4 Image -->
+  <div class="project-media" id="project4">
+    <img src="imagesp/galentines.JPG" alt="Project 4: Cakes">
   </div>
 
-  <div class="img_right" id="project4"><img src="imagesp/galentines.JPG"></div>
-  <div class="text_left">
-    <p><h3>Project #4: cakes</h3></br> I've been baking for years and only recently decided to get creative. At the beginning of the year, i could not find a cake artist to make me a birthday cake. Therefore, i took matters into my own hands. It has become an expensive but very fulfilling hobby. (:
-    </p>
+  <!-- Project 4 Text -->
+  <div class="project-text">
+    <h3>Project #4: cakes</h3>
+    <p>I've been baking for years and only recently decided to get creative. At the beginning of the year, i could not find a cake artist to make me a birthday cake. Therefore, i took matters into my own hands. It has become an expensive but very fulfilling hobby. (:</p>
   </div>
+</div>
   
 <script>
 const container = document.getElementById('project2');
